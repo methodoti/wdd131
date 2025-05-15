@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #CAD2C5;
+    --secondary-color: #84A98C;
+    --accent1-color: #52796F;
+    --accent2-color: #2F3E46;
+    --background-headfooter: #52796F;
+    --background-menu: #2F3E46;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #eee;
+    font-weight: 500;
+    padding: .5rem;
+}
+
+h2 {
+    font-weight: 500;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+body { 
+    max-width: 840px;
+    margin: 0 auto;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+header {
+    /* position: relative;
+    display: flex;
+    flex-direction: column; */
+    /* background-color: rgb(0 110 182 / 1); */
+    background-color: var(--accent1-color);
+    text-align: center;
+}
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+
+    margin: 0 auto;
+    /* background-color: rgb(0 0 0 / 1); */
+    background-color: var(--accent2-color);
+}
+
+nav ul {
+    list-style: none;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+/* nav li {
+    flex: 1 0 auto;
+} */
+
+nav a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: overline;
+    text-shadow: 1px 1px 3px white;
+}
+
+/* larger/wider views **************************/
+@media (min-width: 540px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 0 auto;
+        /* flex: [flex-grow] [flex-shrink] [flex-basis]; 
+		in this example, the items will not shrink but can grow to fill the space at natural content width*/
+    }
+}
+
+main {
+    padding: 1rem;
+    height: auto;
+    display: grid;
+    grid-gap: .5rem;
+    /* gap: 1rem; */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer {
+    background-color: var(--background-headfooter);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+/* CLASSES */
+.parent { /*not used */
+    display: grid;
+    /* height: 100vh; */
+    grid-template: auto 1fr auto / 1fr;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    /* background: coral; */
+    /* border: 1px solid rgb(0 0 0 / .3); */
+    border: 1px solid var(--accent1-color);
+    border-radius: 0.5rem;
+    /* margin: 1rem; */
+
+}
+
