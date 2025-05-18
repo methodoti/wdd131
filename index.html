@@ -8,14 +8,15 @@
         <meta name="author" content="Marcelo Severo Patricio">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/base.css">
+        <script src="scripts/getdates.js" defer></script>        
     </head>
     <body>
-        <!-- <div class="parent">         -->
         <div>     
             <header>
-                <h1>WDD 131: Dynamic Web Fundamentals - Marcelo Severo Patricio</h1>
+                <!-- <h1>WDD 131: Dynamic Web Fundamentals - Marcelo Severo Patricio</h1> -->
+                <h1>WDD 131: Dynamic Web Fundamentals - <span id="myname"></span></h1>
                 <nav>
                     <ul class="navigation">
                         <li><a href="https://www.linkedin.com/in/MSPatricio/">Linkedin Profile</a></li>
@@ -25,20 +26,52 @@
                     </ul>
                 </nav>
             </header>
-                
             <main>
                 <section class="card">
-                    <h2>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minus deserunt rerum sint laudantium quibusdam quisquam sapiente corrupti harum a quod quos id cumque, quia rem animi at doloribus impedit?</p>
+                    <h2 class="cardtitle">About Me</h2>
+                    <div class="aboutme">
+                        <div>
+                            <p>Hello! My name is Marcelo Patricio, I'm from Porto Alegre, Brazil! I love technology, airplanes and I want to be a good programmer. Pathway opened a way to make this objective possible. I am excited to learn and grow in this journey of web
+                            development. Through this course, I aim to build a strong foundation in web design and development, enabling me to
+                            create meaningful and impactful projects that reflect my passion for technology and creativity.
+                            </p>
+                            <div class="mycountry">
+                                <h2>Rio Grande do Sul, Brazil</h2>
+                                <div class="country-grid">
+                                    <div class="flag-container">
+                                        <figure class="myflag-figure">
+                                            <img class="myflag" src="images/brazil-flag.webp" alt="Official Flag of Brazil">
+                                            <figcaption>Official Flag of Brazil</figcaption>    
+                                        </figure>
+                                    </div>
+                                    <div>
+                                        <p>Brazil, the largest country in South America, is known for the Amazon Rainforest, vibrant Carnival, and the
+                                            Christ the Redeemer statue. Located along the Atlantic coast, it offers diverse landscapes and a rich culture,
+                                            with Portuguese as its official language.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="profile" src="images/profile.webp" alt="My Profile picture">
+                    </div>  
                 </section>
                 <section class="card">
-                    <h2>Web Dev Resources</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum culpa earum!</p>
+                    <h2 class="cardtitle">Web Dev Resources</h2>
+                    <div class="webdev">
+                        <ul>
+                            <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                            <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                            <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                            <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                            <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                            <li><a href="https://placehold.co/" target="_blank">Image Placeholder</a></li>   
+                        </ul>
+                    </div>
                 </section>
             </main>
             <footer>
-                <p>©<span id="currentyear"></span> 📍 Marcelo Patricio 📍 Brazil</p>
-                <p>Last Modification: <span id="lastModified"></span></p>                
+                <p>©<span id="currentyear"></span> 📍 Marcelo Severo Patricio 📍 Brazil</p>
+                <p class="highlight">Last Modification: <span id="lastModified"></span></p>                
             </footer>
         </div>
     </body>

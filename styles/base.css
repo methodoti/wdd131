@@ -1,10 +1,11 @@
 :root {
     --primary-color: #CAD2C5;
     --secondary-color: #84A98C;
-    --accent1-color: #52796F;
-    --accent2-color: #2F3E46;
-    --background-headfooter: #52796F;
-    --background-menu: #2F3E46;
+    /* --accent2-color: #52796F; */
+    --accent2-color: black;
+    --accent1-color: #2F3E46;
+    /* --background-headfooter: #52796F;
+    --background-menu: #2F3E46; */
 }
 
 * {
@@ -14,21 +15,23 @@
 }
 
 h1 {
-    color: #eee;
     font-weight: 500;
+    font-size: 1.2rem;
     padding: .5rem;
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
 }
 
 h2 {
     font-weight: 500;
     padding: .5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-family: Fredoka, Arial, Helvetica, sans-serif;
 }
 
 body { 
-    max-width: 840px;
+    max-width: 940px;
     margin: 0 auto;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     font-size: 1rem;
 }
 
@@ -39,6 +42,13 @@ header {
     /* background-color: rgb(0 110 182 / 1); */
     background-color: var(--accent1-color);
     text-align: center;
+    
+}
+
+header h1 {
+    color: white;
+    /* height: 100px; */
+    padding: 1rem;
 }
 
 nav {
@@ -64,7 +74,7 @@ nav ul {
 
 nav a {
     display: block;
-    color: #eee;
+    color: #fff;
     padding: 0.75rem;
     text-decoration: none;
     text-align: center;
@@ -72,7 +82,7 @@ nav a {
 
 nav a:hover {
     text-decoration: overline;
-    text-shadow: 1px 1px 3px white;
+    text-shadow: 1px 1px 3px whitesmoke;
 }
 
 /* larger/wider views **************************/
@@ -83,44 +93,113 @@ nav a:hover {
 
     nav ul li {
         flex: 1 0 auto;
-        /* flex: [flex-grow] [flex-shrink] [flex-basis]; 
-		in this example, the items will not shrink but can grow to fill the space at natural content width*/
     }
 }
 
 main {
     padding: 1rem;
-    height: auto;
+    /* height: auto; */
     display: grid;
-    grid-gap: .5rem;
-    /* gap: 1rem; */
-    grid-template-columns: repeat(2, 1fr);
-}
-
-footer {
-    background-color: var(--background-headfooter);
-    padding: 1rem;
-    text-align: center;
-    color: white;
-}
-
-/* CLASSES */
-.parent { /*not used */
-    display: grid;
-    /* height: 100vh; */
-    grid-template: auto 1fr auto / 1fr;
+    /* grid-gap: .5rem; */
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    justify-content: space-between;
-    /* background: coral; */
-    /* border: 1px solid rgb(0 0 0 / .3); */
+    /* justify-content: space-between; */
     border: 1px solid var(--accent1-color);
-    border-radius: 0.5rem;
+    border-radius: .6rem;
     /* margin: 1rem; */
+}
 
+.cardtitle {
+    background-color: var(--accent1-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    text-align: center;
+}
+
+.aboutme {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    gap: 1rem;
+}
+
+.profile {
+    width: 150px;
+    /* width: 100%; */
+    border: 1px solid var(--accent1-color);
+}
+
+.mycountry {
+    margin-top: 1rem;
+}
+
+.mycountry h2 {
+    text-align: center;
+    border-bottom: 1px solid var(--accent2-color);
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Flag on left (1 part), text on right (2 parts) */
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.flag-container {
+    align-self: center;
+}
+
+.myflag-figure {
+    text-align: center;
+    margin: 0;
+    font-size: .7rem;
+}
+
+.myflag {
+    width: 130px;
+    border: 1px solid var(--accent1-color);
+    /* margin-top: 0.5rem; */
+}
+
+.webdev {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.webdev li {
+    line-height: 1.5rem;
+}
+
+footer {
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+/* CLASSES */
+.parent { /*not used */
+    display: grid;
+    /* height: 100vh; */
+    grid-template: auto 1fr auto / 2fr 1fr;
+}
+
+.highlight {
+    color: yellow;
+    font-size: 1rem;
 }
 
