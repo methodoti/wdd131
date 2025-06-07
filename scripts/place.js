@@ -1,7 +1,9 @@
+/* getdates.js */
+
 // Select the DOM elements for output
 const year = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
-const windChill = document.querySelector("#windChill"); // Adicione este ID no HTML para o wind chill
+const windChill = document.querySelector("#windChill");
 
 // Use the Date object
 const today = new Date();
@@ -14,13 +16,17 @@ year.innerHTML = `<span>${today.getFullYear()}</span>`;
 // Set the last modified date with proper formatting
 lastModified.innerHTML = `<span class="highlight">${new Date(document.lastModified).toLocaleDateString('en-US', options)}</span>`;
 
-// Calculate wind chill (static values: T = 15°C, V = 10 km/h)
+// Define the calculateWindChill function with a single line
+function calculateWindChill(temperature, windSpeed) {
+    return 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
+}
+
+// Static values and wind chill calculation
 const temperature = 15; // °C
 const windSpeed = 10;   // km/h
-const windChillValue = 13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16);
 
 if (temperature <= 10 && windSpeed > 4.8) {
-    windChill.innerHTML = `<span>${windChillValue.toFixed(2)}°C</span>`;
+    windChill.innerHTML = `<span>${calculateWindChill(temperature, windSpeed).toFixed(2)}°C</span>`;
 } else {
     windChill.innerHTML = `<span>N/A</span>`;
 }
