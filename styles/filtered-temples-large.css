@@ -1,0 +1,52 @@
+@media (min-width: 540px) {
+    body {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+    
+    #menu {
+            display: none;
+        }
+
+    header { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav {
+        position: static;
+        display: block;
+        width: auto;
+    }
+
+    nav ul { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav ul li { 
+        flex: 0 0 auto;
+    }
+
+    nav a { 
+        padding: 0.5rem;
+        text-align: center;
+        min-width: 50px;
+    }
+    
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    figure img {
+        height: auto;
+    }
+}
