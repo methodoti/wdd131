@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 131 | Product Review Form - Marcelo Severo Patricio</title>
+    <meta name="description" content="WDD 131: W05 Learning Activity: Product Review Form">
+    <meta name="author" content="Marcelo Severo Patricio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="wf1">
+            <label class="required">Product Name *
+                <select name="productName" required>
+                    <option value="" disabled selected>Select a Product &#9662;</option>
+                    <!-- JS items feed -->
+                </select>
+            </label>
+
+            <label class="required">Overall Rating *</label>
+                <div class="rating-group">
+                    <label>☆ <input type="radio" name="rating" value="1" required></label>
+                    <label>☆☆ <input type="radio" name="rating" value="2"></label>
+                    <label>☆☆☆ <input type="radio" name="rating" value="3"></label>
+                    <label>☆☆☆☆ <input type="radio" name="rating" value="4"></label>
+                    <label>☆☆☆☆☆ <input type="radio" name="rating" value="5"></label>      
+                </div>
+                
+            <label class="required">Date of Installation *<input type="date" name="installDate" required></label>            
+            <label>Which features did you find useful in the product? <br>(Check all that apply)</label>
+                <div class="checkbox-group">
+                    <label class="label-top"><input type="checkbox" name="features" value="design"> Design</label>
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="easeOfUse"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                </div>
+            
+            <label>Written Review (Optional)<textarea name="writtenReview" rows="4"></textarea></label>
+            <label>Your Name (Optional)<input type="text" name="userName"></label>
+            <input type="submit" value="Post Your Review">
+        </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> 📍 <span id="myname"></span> 📍 Brazil</p>
+        <p class="highlight">Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

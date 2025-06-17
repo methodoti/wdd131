@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #CAD2C5;
+    --secondary-color: #84A98C;
+    --accent1-color: #2F3E46;
+    --accent2-color: black;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.highlight {
+    color: yellow;
+}
+
+/*----------- FORM STYLING  --------------*/
+
+form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px var(--accent1-color);
+    max-width: 500px;
+    margin: 0 auto;
+    /* margin-bottom: 1rem; */
+}
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.wf1 legend {
+    color: #445ba9;
+    padding: 0 .5rem;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--accent2-color);
+    font-size: .9rem;
+}
+
+.wf1 label.required {
+    color: #9c2c13;    
+}
+
+.wf1 div {
+    font-size: .9rem;
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="tel"],
+.wf1 input[type="email"],
+.wf1 input[type="url"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea,
+.wf1 input[type="number"] {
+    background-color: #eee;
+    display: block;
+    /* border: solid 1px #999; */
+    border: solid 1px var(--accent1-color);
+    border-radius: 6px;
+    padding: .75rem;
+    /* color: #555; */
+    color: var(--accent1-color);
+    /* when user types, they see gray */
+    width: 100%;
+    /* max-width: 400px; */
+    appearance: none;
+    /* overwright the brwoser stile */
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--secondary-color), var(--accent1-color));
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    
+    max-width: 400px;
+    width: 50%;
+    /* margin-top: 1rem; */
+    margin: 1rem 25% 1rem 25%;
+    box-shadow: 1px 1px 4px var(--accent1-color);    
+}
+
+.wf1 input[type="submit"]:hover {
+    /* background-color: var(--secondary-color); */
+    background-image: linear-gradient(var(--accent1-color), var(--secondary-color));
+    /* color: red */
+        /* background-color: red; */
+}
+
+/* button {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+} */
+
+
+
+
+.wf1 input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+.wf1 label.label-top {
+    /* color: #9c2c13; */
+    padding-top: .5rem;
+}
+
+.rating-group input[type="radio"] {
+    display: block;
+    margin: 0 auto;
+}
+
+.rating-group label {
+    font-size: 1.2rem;
+    padding-top: 0;
+}
+
+/* mobile */
+/* @media (max-width: 480px) { */
+@media (max-width: 540px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        padding: .75rem;
+    }
+}
+
+/* ... OVERALLL RATING ... */
+
+.rating-group {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ... Review page ... */
+
+#review-confirmation {
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#review-confirmation h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#review-confirmation p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* #review-confirmation p {
+    margin-bottom: 1rem;
+    
+}
+
+*/
