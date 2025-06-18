@@ -1,0 +1,89 @@
+/* Define color variables - Comanche-inspired theme */
+:root {
+    --background-color: #fdfcf7; /* Classic Off-White */
+    --text-color: #3d3d3d;       /* Dark Gray for text */
+    --primary-color: #a62624;    /* Piper Red for headers/footers */
+    --accent-color: #001f3f;     /* Navy Blue for accents/links */
+
+    /* Define Font Variables */
+    --heading-font: 'Roboto Slab', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Use heading font for h1 and h2 */
+h1, h2 {
+    font-family: var(--heading-font);
+    font-weight: 700; /* Use a bold weight for headings */
+}
+
+/* Specific color for h1 inside the dark header */
+header h1 {
+    color: white;
+}
+
+main {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Specific color for h2 in the main content */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    /* border-bottom: 2px solid var(--accent-color); */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for Wireframe Images */
+
+/* Base styles for both wireframes */
+.wireframe-mobile,
+.wireframe-desktop {
+    width: 90%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Specific size for mobile wireframe */
+.wireframe-mobile {
+    max-width: 250px;
+}
+
+/* Specific size for desktop wireframe */
+.wireframe-desktop {
+    max-width: 750px;
+}
