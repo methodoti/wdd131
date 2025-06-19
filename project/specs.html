@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comanche Sim Checklist | Aircraft Specs</title>
+    <meta name="description" content="Technical specifications and history of the Piper PA-24 Comanche 250 aircraft.">
+    <meta name="author" content="Marcelo Severo Patricio">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-large.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="site-title">Comanche Sim Checklist</a>
+    
+        <div class="menu-controls">
+            <button id="menu-btn" aria-label="Toggle navigation menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="checklist.html">Interactive Checklist</a></li>
+                    <li><a href="specs.html" class="active">Aircraft Specs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="specs-main">
+        <h2>Aircraft Specifications & History</h2>
+        <div class="specs-content">
+            <section class="history">
+                <h3>A Legacy of Performance</h3>
+                <p>The Piper PA-24 Comanche is a family of four-seat, single-engined, low-wing airplanes that were produced
+                    by Piper Aircraft from 1957 to 1972. The Comanche 250, introduced in 1958, was known for its excellent
+                    performance, efficiency, and structural integrity. With its distinctive stabilator (a single-piece
+                    horizontal stabilizer and elevator), it became a popular choice for both personal use and as a
+                    cross-country touring aircraft, setting numerous speed and distance records in its class.</p>
+            </section>
+    
+            <section class="tech-specs">
+                <h3>Technical Data</h3>
+                <dl>
+                    <dt>Crew:</dt>
+                    <dd>1</dd>
+    
+                    <dt>Capacity:</dt>
+                    <dd>3 passengers</dd>
+    
+                    <dt>Cruise Speed:</dt>
+                    <dd>160 knots (185 mph, 298 km/h)</dd>
+    
+                    <dt>Range:</dt>
+                    <dd>1,064 nmi (1,225 mi, 1,971 km)</dd>
+    
+                    <dt>Service Ceiling:</dt>
+                    <dd>20,000 ft (6,100 m)</dd>
+    
+                    <dt>Engine:</dt>
+                    <dd>1 x Lycoming O-540, 250 hp</dd>
+                </dl>
+            </section>
+    
+            <div class="panel-image">
+                <figure>
+                    <img src="images/comanche-panel.webp" alt="Instrument panel of a Piper Comanche 250" loading="lazy">
+                    <figcaption>Typical PA-24 Instrument Panel</figcaption>
+                </figure>
+            </div>
+        </div>
+        <section class="contact-form">
+            <h3>Contact Us or Suggest a Procedure</h3>
+            <form method="get" action="thanks.html">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label>Name* <input type="text" name="name" required></label>
+                    <label>Email* <input type="email" name="email" required placeholder="your.email@example.com"></label>
+                    <label>Message* <textarea name="message" rows="5" required></textarea></label>
+                </fieldset>
+                <input type="submit" value="Send Your Suggestion">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> | Marcelo Severo Patricio | <a href="references.html">References</a></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

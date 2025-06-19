@@ -1,0 +1,26 @@
+@media (min-width: 780px) {
+    #menu-btn {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .navigation a:hover {
+        /* background-color: transparent; */
+        background-color: var(--background-color);
+        color: var(--primary-color);
+        /* text-decoration: underline; */
+    }
+}

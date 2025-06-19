@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comanche Sim Checklist | Home</title>
+    <meta name="description" content="A practical tool and information hub for flight simulation enthusiasts of the Piper PA-24 Comanche 250. Featuring an interactive checklist.">
+    <meta name="author" content="Marcelo Severo Patricio">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-large.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="site-title">Comanche Sim Checklist</a>
+    
+        <div class="menu-controls">
+            <button id="menu-btn" aria-label="Toggle navigation menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="checklist.html">Interactive Checklist</a></li>
+                    <li><a href="specs.html">Aircraft Specs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 580px)">
+                <img src="images/hero-small.webp" alt="Piper PA-24 Comanche in flight" loading="lazy" width="1280" height="844">
+            </picture>
+        </div>
+    
+        <section class="home-intro">
+            <h2>A Practical Cockpit Companion for the Digital Skies</h2>
+            <p>Welcome to the essential resource for flight simulation pilots of the Piper PA-24 Comanche 250. This site
+                provides a fully interactive, step-by-step checklist to ensure your virtual flights are safe and by the
+                book. You will also find key performance data and historical information to enrich your simulation
+                experience. </p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>©<span id="currentyear"></span> | Marcelo Severo Patricio | <a href="references.html">References</a></p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

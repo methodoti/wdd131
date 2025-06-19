@@ -1,0 +1,374 @@
+:root {
+    --background-color: #fdfcf7;
+    --text-color: #3d3d3d;
+    --primary-color: #a62624;
+    /* Piper Red */
+    --accent-color: #001f3f;
+    /* Navy Blue */
+    --heading-font: 'Roboto Slab', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    max-width: 1140px; 
+    margin: 0 auto; 
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* -------------------- Header & Navigation Styling -------------------- */
+main h2,
+main h3 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#site-title {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+/* -- Menu rules on main.css -- */
+
+#menu-btn {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+#menu-btn::before {
+    content: "☰";
+}
+
+#menu-btn.open::before {
+    content: "✖";
+}
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* 1. Menu start hiden */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation.open {
+    display: flex;
+    /* 4. .open class show the menu */
+}
+
+.active::before {
+    content: "🛩️";
+    /* just a wayfinding symbol for the user */
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigation a:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* -------------------- Hero Section Styling -------------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -------------------- Home Page Intro Section -------------------- */
+
+.home-intro {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.home-intro h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* -------------------- Footer Styling -------------------- */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a,
+footer a:visited {
+    color: var(--background-color);
+    text-decoration: underline;
+}
+
+/* -------------------- Specs Page Styling -------------------- */
+
+.specs-main {
+    padding: 1.5rem;
+}
+
+.specs-main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.specs-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.tech-specs dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+.tech-specs dt {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.panel-image {
+    grid-column: 1 / -1;
+    margin-top: 1.5rem;
+}
+
+.panel-image figure {
+    margin: 0;
+    text-align: center;
+}
+
+.panel-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-image figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* -------------------- Checklist Page Styling -------------------- */
+
+.checklist-main {
+    /* margin: 1rem;  */
+    padding: 1.5rem;
+}
+
+.checklist-main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.checklist-section {
+    background-color: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checklist-section h3 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.checklist-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.checklist-item:hover {
+    background-color: #f9f9f9;
+}
+
+.item-name {
+    font-weight: 700;
+}
+
+.item-state {
+    font-family: monospace;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.item-notes {
+    width: 100%;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid #eee;
+}
+
+/* -- Checklist Item Completed State -- */
+.checklist-item.completed {
+    background-color: #e8f5e9;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.checklist-item.completed .item-state {
+    color: #4CAF50;
+}
+
+/* -------------------- Contact Form Styling  -------------------- */
+
+.contact-form {
+    grid-column: 1 / -1;
+    background-color: white;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.contact-form h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-form fieldset {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.contact-form legend {
+    display: none;
+}
+
+.contact-form label {
+    display: block;
+    padding-top: 1rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #f4f4f4;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem;
+    width: 100%;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form input:required,
+.contact-form textarea:required {
+    border-left: 5px solid var(--primary-color);
+}
+
+.contact-form input:required:valid,
+.contact-form textarea:required:valid {
+    border-left: 5px solid #2E7D32;
+}
+
+.contact-form input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--accent-color), #003366);
+    color: white;
+    border-radius: 6px;
+    padding: 0.8rem;
+    width: 96%;
+    max-width: 400px;
+    box-shadow: 1px 1px 4px #999;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-image: linear-gradient(#003366, var(--accent-color));
+}
